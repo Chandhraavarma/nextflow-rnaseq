@@ -1,0 +1,90 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233096
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = hm034
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 3019
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 3019
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+Launching `/scratch/chandhraav/nextflow/main.nf` [boring_dijkstra] revision: efc5667493
+
+[-        ] FASTQC_RAW -
+[-        ] FASTP      -
+[-        ] STAR_INDEX -
+[-        ] STAR_ALIGN -
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+Creating env using conda: /scratch/chandhraav/nextflow/envs/rnaseq.yml [cache /scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf]
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+ERROR ~ Error executing process > 'STAR_INDEX'
+
+Caused by:
+  Failed to create Conda environment
+    command: conda env create --prefix /scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf --file /scratch/chandhraav/nextflow/envs/rnaseq.yml
+    status : 137
+    message:
+      Channels:
+       - conda-forge
+       - bioconda
+       - defaults
+      Platform: linux-64
+      Collecting package metadata (repodata.json): ...working...
+
+
+
+ -- Check '.nextflow.log' file for details
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+ERROR ~ Error executing process > 'STAR_INDEX'
+
+Caused by:
+  Failed to create Conda environment
+    command: conda env create --prefix /scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf --file /scratch/chandhraav/nextflow/envs/rnaseq.yml
+    status : 137
+    message:
+      Channels:
+       - conda-forge
+       - bioconda
+       - defaults
+      Platform: linux-64
+      Collecting package metadata (repodata.json): ...working...
+
+
+
+ -- Check '.nextflow.log' file for details
+
+WARN: Failed to render execution report -- see the log file for details
+WARN: Failed to render execution timeline -- see the log file for details
+

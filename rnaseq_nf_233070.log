@@ -1,0 +1,37 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233070
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = hm034
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 48069
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 48069
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+WARN: It appears you have never run this project before -- Option `-resume` is ignored
+Launching `/scratch/chandhraav/nextflow/main.nf` [mad_bassi] revision: 19fc2d2865
+
+
+Error main.nf:9:1: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function
+│   9 | if (!params.input || !params.fasta || !params.gtf) {
+│     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+│  10 |     error "Required: --input samplesheet.csv --fasta genome.fa --gtf a
+╰  11 | }
+
+
+ERROR ~ Script compilation failed
+
+ -- Check '.nextflow.log' file for details

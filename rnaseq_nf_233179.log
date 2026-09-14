@@ -1,0 +1,206 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233179
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = hm034
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 6453
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 8
+SLURM_NTASKS = 
+SLURM_TASK_PID = 6453
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+Launching `/scratch/chandhraav/nextflow/main.nf` [sad_mandelbrot] revision: efc5667493
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+executor >  local (1)
+[-        ] FASTQC_RAW              | 0 of 2
+[-        ] FASTP                   | 0 of 1
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (1)
+[-        ] FASTQC_RAW              | 0 of 2
+[-        ] FASTP                   | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (3)
+[28/c99f31] FASTQC_RAW (SRR1039509) | 0 of 2
+[-        ] FASTP                   | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+[f1/e84c30] NOTE: Process `STAR_INDEX (STAR index)` terminated with an error exit status (104) -- Execution is retried (1)
+
+executor >  local (4)
+[28/c99f31] FASTQC_RAW (SRR1039509) | 0 of 2
+[fa/2be75e] FASTP (SRR1039508)      | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+
+
+executor >  local (4)
+[28/c99f31] FASTQC_RAW (SRR1039509) | 1 of 2
+[fa/2be75e] FASTP (SRR1039508)      | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 0 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 1 of 2
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 2 of 2 ✔
+[f1/e84c30] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 2 of 2 ✔
+[77/f65b16] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 2 of 2 ✔
+[77/f65b16] STAR_INDEX (STAR index) | 0 of 1, retries: 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+ERROR ~ Error executing process > 'STAR_INDEX (STAR index)'
+
+Caused by:
+  Process `STAR_INDEX (STAR index)` terminated with an error exit status (104)
+
+
+Command executed:
+
+  mkdir star_index
+  STAR --runThreadN 8       --runMode genomeGenerate       --genomeDir star_index       --genomeFastaFiles genome.fa       --sjdbGTFfile Annotation.gtf
+
+Command exit status:
+  104
+
+Command output:
+  	/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf/bin/STAR-avx2 --runThreadN 8 --runMode genomeGenerate --genomeDir star_index --genomeFastaFiles genome.fa --sjdbGTFfile Annotation.gtf
+  	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+  Sep 13 23:57:14 ..... started STAR run
+  Sep 13 23:57:14 ... starting to generate Genome files
+
+Command error:
+  	/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf/bin/STAR-avx2 --runThreadN 8 --runMode genomeGenerate --genomeDir star_index --genomeFastaFiles genome.fa --sjdbGTFfile Annotation.gtf
+  	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+  Sep 13 23:57:14 ..... started STAR run
+  
+  EXITING because of INPUT ERROR: could not read from genomeFastaFile: genome.fa
+  
+  Sep 13 23:57:14 ...... FATAL ERROR, exiting
+  Sep 13 23:57:14 ... starting to generate Genome files
+
+Work dir:
+  /scratch/chandhraav/nextflow/work/77/f65b16bb6ce70128fd425ba3f413cb
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+
+ -- Check '.nextflow.log' file for details
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2 ✔
+[87/dc8a02] FASTP (SRR1039509)      | 2 of 2 ✔
+[77/f65b16] STAR_INDEX (STAR index) | 0 of 1, retries: 1 ✘
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 | 0 of 1
+ERROR ~ Error executing process > 'STAR_INDEX (STAR index)'
+
+Caused by:
+  Process `STAR_INDEX (STAR index)` terminated with an error exit status (104)
+
+
+Command executed:
+
+  mkdir star_index
+  STAR --runThreadN 8       --runMode genomeGenerate       --genomeDir star_index       --genomeFastaFiles genome.fa       --sjdbGTFfile Annotation.gtf
+
+Command exit status:
+  104
+
+Command output:
+  	/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf/bin/STAR-avx2 --runThreadN 8 --runMode genomeGenerate --genomeDir star_index --genomeFastaFiles genome.fa --sjdbGTFfile Annotation.gtf
+  	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+  Sep 13 23:57:14 ..... started STAR run
+  Sep 13 23:57:14 ... starting to generate Genome files
+
+Command error:
+  	/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf/bin/STAR-avx2 --runThreadN 8 --runMode genomeGenerate --genomeDir star_index --genomeFastaFiles genome.fa --sjdbGTFfile Annotation.gtf
+  	STAR version: 2.7.11b   compiled: 2025-11-14T12:06:42+0000 :/opt/conda/conda-bld/star_1763121846936/work/source
+  Sep 13 23:57:14 ..... started STAR run
+  
+  EXITING because of INPUT ERROR: could not read from genomeFastaFile: genome.fa
+  
+  Sep 13 23:57:14 ...... FATAL ERROR, exiting
+  Sep 13 23:57:14 ... starting to generate Genome files
+
+Work dir:
+  /scratch/chandhraav/nextflow/work/77/f65b16bb6ce70128fd425ba3f413cb
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+
+ -- Check '.nextflow.log' file for details
+WARN: Failed to render execution report -- see the log file for details
+WARN: Failed to render execution timeline -- see the log file for details
+

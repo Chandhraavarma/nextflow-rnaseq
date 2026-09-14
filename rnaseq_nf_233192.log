@@ -1,0 +1,142 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233192
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = gpu001
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 12571
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 8
+SLURM_NTASKS = 
+SLURM_TASK_PID = 12571
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+Launching `/scratch/chandhraav/nextflow/main.nf` [serene_fermat] revision: efc5667493
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    | 0 of 1
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+executor >  local (1)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index) | 0 of 1
+[-        ] STAR_ALIGN              -
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (1)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index) | 0 of 1 ✔
+[-        ] STAR_ALIGN              | 0 of 2
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (2)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index) | 1 of 1 ✔
+[28/605d16] STAR_ALIGN (SRR1039508) | 0 of 2
+[-        ] FEATURECOUNTS           -
+[-        ] MULTIQC                 -
+
+executor >  local (3)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index) | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509) | 1 of 2
+[-        ] FEATURECOUNTS           | 0 of 1
+[-        ] MULTIQC                 -
+
+executor >  local (3)
+[ea/4074f7] FASTQC_RAW (SRR1039508) | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)      | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index) | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509) | 1 of 2
+[-        ] FEATURECOUNTS           | 0 of 1
+[-        ] MULTIQC                 -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[d1/057a8c] FEATURECOUNTS (SRR1039509) | 0 of 2
+[-        ] MULTIQC                    -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[d1/057a8c] FEATURECOUNTS (SRR1039509) | 0 of 2
+[-        ] MULTIQC                    -
+
+executor >  local (5)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[d1/057a8c] FEATURECOUNTS (SRR1039509) | 1 of 2
+[-        ] MULTIQC                    -
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[64/1ab33f] FEATURECOUNTS (SRR1039508) | 2 of 2 ✔
+[65/8f5e9d] MULTIQC (MultiQC)          | 0 of 1
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[64/1ab33f] FEATURECOUNTS (SRR1039508) | 2 of 2 ✔
+[65/8f5e9d] MULTIQC (MultiQC)          | 0 of 1
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[64/1ab33f] FEATURECOUNTS (SRR1039508) | 2 of 2 ✔
+[65/8f5e9d] MULTIQC (MultiQC)          | 1 of 1 ✔
+
+executor >  local (6)
+[ea/4074f7] FASTQC_RAW (SRR1039508)    | 2 of 2, cached: 2 ✔
+[fa/2be75e] FASTP (SRR1039508)         | 2 of 2, cached: 2 ✔
+[98/a2e78f] STAR_INDEX (STAR index)    | 1 of 1 ✔
+[70/def05a] STAR_ALIGN (SRR1039509)    | 2 of 2 ✔
+[64/1ab33f] FEATURECOUNTS (SRR1039508) | 2 of 2 ✔
+[65/8f5e9d] MULTIQC (MultiQC)          | 1 of 1 ✔
+Completed at: 14-Sep-2026 01:12:44
+Duration    : 1h 5m 3s
+CPU hours   : 8.8 (4.1% cached)
+Succeeded   : 6
+Cached      : 4
+
+
+Pipeline finished.

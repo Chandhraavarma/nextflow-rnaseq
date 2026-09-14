@@ -1,0 +1,14 @@
+name: rnaseq-nextflow
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - fastqc=0.12.1
+  - fastp=0.23.4
+  - star=2.7.11b
+  - subread=2.0.6
+  - multiqc=1.21
+  - r-base=4.3
+  - bioconductor-deseq2=1.42
+  - r-ggplot2

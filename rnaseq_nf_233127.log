@@ -1,0 +1,104 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233127
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = hm034
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 4293
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 4293
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+Launching `/scratch/chandhraav/nextflow/main.nf` [peaceful_shaw] revision: efc5667493
+
+[-        ] FASTQC_RAW -
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+[-        ] FASTQC_RAW    -
+[-        ] FASTP         -
+[-        ] STAR_INDEX    -
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+Creating env using conda: /scratch/chandhraav/nextflow/envs/rnaseq.yml [cache /scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf]
+
+[-        ] FASTQC_RAW    | 0 of 2
+[-        ] FASTP         | 0 of 2
+[-        ] STAR_INDEX    | 0 of 1
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+
+ERROR ~ Error executing process > 'FASTP (SRR1039509)'
+
+Caused by:
+  Process requirement exceeds available CPUs -- req: 4; avail: 1
+
+
+Command executed:
+
+  fastp       --thread 4       --in1 SRR1039509_1.fastq.gz --in2 SRR1039509_2.fastq.gz       --out1 SRR1039509_R1.trim.fastq.gz       --out2 SRR1039509_R2.trim.fastq.gz       --html SRR1039509.fastp.html       --json SRR1039509.fastp.json
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Work dir:
+  /scratch/chandhraav/nextflow/work/51/6492f45e7b333c34b08e620dc80cba
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+
+ -- Check '.nextflow.log' file for details
+
+[-        ] FASTQC_RAW    | 0 of 2
+[-        ] FASTP         | 0 of 2
+[-        ] STAR_INDEX    | 0 of 1
+[-        ] STAR_ALIGN    -
+[-        ] FEATURECOUNTS -
+[-        ] MULTIQC       -
+ERROR ~ Error executing process > 'FASTP (SRR1039509)'
+
+Caused by:
+  Process requirement exceeds available CPUs -- req: 4; avail: 1
+
+
+Command executed:
+
+  fastp       --thread 4       --in1 SRR1039509_1.fastq.gz --in2 SRR1039509_2.fastq.gz       --out1 SRR1039509_R1.trim.fastq.gz       --out2 SRR1039509_R2.trim.fastq.gz       --html SRR1039509.fastp.html       --json SRR1039509.fastp.json
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Work dir:
+  /scratch/chandhraav/nextflow/work/51/6492f45e7b333c34b08e620dc80cba
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+
+ -- Check '.nextflow.log' file for details
+
+WARN: Failed to render execution report -- see the log file for details
+WARN: Failed to render execution timeline -- see the log file for details
+

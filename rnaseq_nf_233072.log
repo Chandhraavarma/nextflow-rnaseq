@@ -1,0 +1,28 @@
+==========================================
+SLURM_CLUSTER_NAME = paramutkarsh
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = nsmexternal
+SLURM_JOB_ID = 233072
+SLURM_JOB_NAME = rnaseq_nf
+SLURM_JOB_NODELIST = hm034
+SLURM_JOB_USER = chandhraav
+SLURM_JOB_UID = 23623
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 1501
+SLURM_SUBMIT_DIR = /scratch/chandhraav/nextflow
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 1501
+==========================================
+
+ N E X T F L O W   ~  version 26.04.6
+
+Launching `/scratch/chandhraav/nextflow/main.nf` [kickass_descartes] revision: efc5667493
+
+ERROR ~ No such file or directory: /scratch/chandhraav/nextflow/raw/samplesheet.csv
+
+ -- Check script 'main.nf' at line: 143 or see '.nextflow.log' file for more details
