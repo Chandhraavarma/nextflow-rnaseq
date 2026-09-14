@@ -1,0 +1,152 @@
+Sept-14 00:07:38.782 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /scratch/chandhraav/nextflow/main.nf --input /scratch/chandhraav/nextflow/raw/samplesheet.csv --fasta /scratch/chandhraav/nextflow/reference/genome.fa --gtf /scratch/chandhraav/nextflow/reference/Annotation.gtf --skip_deseq2 true --outdir /scratch/chandhraav/nextflow/results -profile conda -resume -with-report /scratch/chandhraav/nextflow/results/nextflow_report_233192.html -with-trace /scratch/chandhraav/nextflow/results/nextflow_trace_233192.txt
+Sept-14 00:07:38.940 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Sept-14 00:07:39.108 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/chandhraav/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Sept-14 00:07:39.168 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sept-14 00:07:39.170 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sept-14 00:07:39.176 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Sept-14 00:07:39.223 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Sept-14 00:07:39.489 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Sept-14 00:07:39.496 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sept-14 00:07:39.551 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/chandhraav/nextflow/nextflow.config
+Sept-14 00:07:39.556 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/chandhraav/nextflow/nextflow.config
+Sept-14 00:07:39.562 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Sept-14 00:07:39.596 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda`
+Sept-14 00:07:40.438 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, slurm]
+Sept-14 00:07:40.645 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sept-14 00:07:40.646 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sept-14 00:07:40.759 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/chandhraav/.nextflow/secrets/store.json
+Sept-14 00:07:40.764 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3dd31157] - activable => nextflow.secret.LocalSecretsProvider@3dd31157
+Sept-14 00:07:40.814 [main] DEBUG nextflow.cli.CmdRun - Launching `/scratch/chandhraav/nextflow/main.nf` [serene_fermat] - revision: efc5667493
+Sept-14 00:07:41.068 [main] DEBUG nextflow.Session - Session UUID: 11cf0b6d-4076-4b95-b790-157e377205bd
+Sept-14 00:07:41.068 [main] DEBUG nextflow.Session - Run name: serene_fermat
+Sept-14 00:07:41.069 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sept-14 00:07:41.107 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sept-14 00:07:41.119 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-14 00:07:41.317 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (10-07-2026 00:19 IST)
+  System: Linux 3.10.0-1160.el7.x86_64
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 13114@gpu001 [172.10.3.115]
+  CPUs: 8 - Mem: 40 GB (39.5 GB) - Swap: 0 (0)
+Sept-14 00:07:41.385 [main] DEBUG nextflow.Session - Work-dir: /scratch/chandhraav/nextflow/work [lustre]
+Sept-14 00:07:41.468 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sept-14 00:07:41.489 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Sept-14 00:07:41.491 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Sept-14 00:07:41.569 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sept-14 00:07:41.599 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sept-14 00:07:41.857 [main] DEBUG nextflow.Session - Session start
+Sept-14 00:07:41.887 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /scratch/chandhraav/nextflow/results/nextflow_trace_233192.txt
+Sept-14 00:07:41.890 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Sept-14 00:07:42.707 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sept-14 00:07:43.133 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FASTQC_RAW
+Sept-14 00:07:43.137 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.138 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.160 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sept-14 00:07:43.182 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=40 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sept-14 00:07:43.186 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sept-14 00:07:43.288 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_RAW': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.371 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FASTP
+Sept-14 00:07:43.374 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.374 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.376 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTP': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.382 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:star_index` matches labels `star_index` for process with name STAR_INDEX
+Sept-14 00:07:43.384 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.384 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.385 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'STAR_INDEX': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.393 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:star_align` matches labels `star_align` for process with name STAR_ALIGN
+Sept-14 00:07:43.395 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.395 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.396 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'STAR_ALIGN': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.401 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FEATURECOUNTS
+Sept-14 00:07:43.403 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.403 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.404 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FEATURECOUNTS': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.450 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name MULTIQC
+Sept-14 00:07:43.452 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-14 00:07:43.452 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-14 00:07:43.453 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=10; fair=false; array=0
+Sept-14 00:07:43.456 [main] DEBUG nextflow.Session - Process names: FASTQC_RAW, STAR_INDEX, FEATURECOUNTS, DESEQ2, MULTIQC, STAR_ALIGN, FASTP
+Sept-14 00:07:43.460 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Sept-14 00:07:43.470 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_RAW
+Sept-14 00:07:43.471 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTP
+Sept-14 00:07:43.471 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_INDEX
+Sept-14 00:07:43.471 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_ALIGN
+Sept-14 00:07:43.471 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FEATURECOUNTS
+Sept-14 00:07:43.471 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Sept-14 00:07:43.471 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Main: /scratch/chandhraav/nextflow/main.nf
+Sept-14 00:07:43.472 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sept-14 00:07:43.472 [main] DEBUG nextflow.Session - Session await
+Sept-14 00:07:43.660 [Actor Thread 4] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/scratch/chandhraav/nextflow/envs/rnaseq.yml; path=/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf
+Sept-14 00:07:43.821 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 00:07:43.824 [Task submitter] INFO  nextflow.Session - [98/a2e78f] Submitted process > STAR_INDEX (STAR index)
+Sept-14 00:07:43.850 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [fa/2be75e] Cached process > FASTP (SRR1039508)
+Sept-14 00:07:43.850 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [87/dc8a02] Cached process > FASTP (SRR1039509)
+Sept-14 00:07:43.858 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [ea/4074f7] Cached process > FASTQC_RAW (SRR1039508)
+Sept-14 00:07:43.858 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [28/c99f31] Cached process > FASTQC_RAW (SRR1039509)
+Sept-14 00:07:43.919 [Actor Thread 10] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-14 00:12:43.361 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:17:43.365 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:22:43.370 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:27:43.427 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:32:43.442 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:37:43.524 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:42:43.563 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:47:43.639 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:52:43.659 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 00:57:43.757 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 01:02:43.769 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 01:04:29.052 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: STAR_INDEX (STAR index); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/98/a2e78f377eca6ae5cb70820530819f]
+Sept-14 01:04:29.064 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-14 01:04:29.271 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 01:04:29.272 [Task submitter] INFO  nextflow.Session - [28/605d16] Submitted process > STAR_ALIGN (SRR1039508)
+Sept-14 01:07:43.795 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 7; name: STAR_ALIGN (SRR1039508); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/28/605d1697408eae10c9afa62293ce8c]
+Sept-14 01:08:14.859 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: STAR_ALIGN (SRR1039508); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/28/605d1697408eae10c9afa62293ce8c]
+Sept-14 01:08:15.020 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 01:08:15.031 [Task submitter] INFO  nextflow.Session - [70/def05a] Submitted process > STAR_ALIGN (SRR1039509)
+Sept-14 01:09:30.067 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 8; name: FEATURECOUNTS (SRR1039508); status: NEW; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/64/1ab33fbfaa34d0571e352e5e227cb0]
+Sept-14 01:11:33.998 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: STAR_ALIGN (SRR1039509); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/70/def05a2a431fe87cc3e214a2123cf5]
+Sept-14 01:11:34.157 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 01:11:34.163 [Task submitter] INFO  nextflow.Session - [64/1ab33f] Submitted process > FEATURECOUNTS (SRR1039508)
+Sept-14 01:11:34.201 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 01:11:34.231 [Task submitter] INFO  nextflow.Session - [d1/057a8c] Submitted process > FEATURECOUNTS (SRR1039509)
+Sept-14 01:12:18.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: FEATURECOUNTS (SRR1039509); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/d1/057a8cfbb4db914c963af5a7eb9572]
+Sept-14 01:12:20.816 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: FEATURECOUNTS (SRR1039508); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/64/1ab33fbfaa34d0571e352e5e227cb0]
+Sept-14 01:12:20.851 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sept-14 01:12:20.851 [Task submitter] INFO  nextflow.Session - [65/8f5e9d] Submitted process > MULTIQC (MultiQC)
+Sept-14 01:12:43.852 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 10; name: MULTIQC (MultiQC); status: RUNNING; exit: -; error: -; workDir: /scratch/chandhraav/nextflow/work/65/8f5e9d57de74d6d57d6b30325c59b0]
+Sept-14 01:12:44.229 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: MULTIQC (MultiQC); status: COMPLETED; exit: 0; error: -; workDir: /scratch/chandhraav/nextflow/work/65/8f5e9d57de74d6d57d6b30325c59b0]
+Sept-14 01:12:44.234 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sept-14 01:12:44.329 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sept-14 01:12:44.329 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sept-14 01:12:44.359 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Sept-14 01:12:44.359 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Sept-14 01:12:44.448 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=6; failedCount=0; ignoredCount=0; cachedCount=4; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8h 27m 54s; failedDuration=0ms; cachedDuration=21m 39s;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=8; peakMemory=32 GB; ]
+Sept-14 01:12:44.625 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Sept-14 01:12:46.066 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Sept-14 01:12:46.221 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Sept-14 01:12:46.260 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sept-14 01:12:46.282 [main] DEBUG nextflow.plugin.PluginsFacade - Using Default plugin manager
+Sept-14 01:12:46.290 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sept-14 01:12:46.290 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sept-14 01:12:46.292 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Sept-14 01:12:46.293 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sept-14 01:12:52.021 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sept-14 01:12:52.022 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Sept-14 01:12:52.022 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

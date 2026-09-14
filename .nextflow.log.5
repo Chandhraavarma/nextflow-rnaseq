@@ -1,0 +1,78 @@
+Sept-13 17:58:40.506 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /scratch/chandhraav/nextflow/main.nf --input /scratch/chandhraav/nextflow/raw/samplesheet.csv --fasta /scratch/chandhraav/nextflow/reference/genome.fa --gtf /scratch/chandhraav/nextflow/reference/Annotation.gtf --skip_deseq2 true --outdir /scratch/chandhraav/nextflow/results -profile conda -resume -with-report /scratch/chandhraav/nextflow/results/nextflow_report_233072.html -with-trace /scratch/chandhraav/nextflow/results/nextflow_trace_233072.txt
+Sept-13 17:58:40.757 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Sept-13 17:58:40.933 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/chandhraav/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Sept-13 17:58:41.007 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sept-13 17:58:41.010 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sept-13 17:58:41.018 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Sept-13 17:58:41.108 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Sept-13 17:58:41.480 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Sept-13 17:58:41.488 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sept-13 17:58:41.576 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 17:58:41.579 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 17:58:41.583 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Sept-13 17:58:41.635 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda`
+Sept-13 17:58:42.978 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, slurm]
+Sept-13 17:58:43.133 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sept-13 17:58:43.133 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sept-13 17:58:43.227 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/chandhraav/.nextflow/secrets/store.json
+Sept-13 17:58:43.234 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@79a04e5f] - activable => nextflow.secret.LocalSecretsProvider@79a04e5f
+Sept-13 17:58:43.282 [main] DEBUG nextflow.cli.CmdRun - Launching `/scratch/chandhraav/nextflow/main.nf` [kickass_descartes] - revision: efc5667493
+Sept-13 17:58:43.709 [main] DEBUG nextflow.Session - Session UUID: 11cf0b6d-4076-4b95-b790-157e377205bd
+Sept-13 17:58:43.711 [main] DEBUG nextflow.Session - Run name: kickass_descartes
+Sept-13 17:58:43.712 [main] DEBUG nextflow.Session - Executor pool size: 2
+Sept-13 17:58:43.757 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sept-13 17:58:43.795 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-13 17:58:43.945 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (18:49 GMT)
+  System: Linux 3.10.0-1160.el7.x86_64
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1985@hm034 [172.10.3.34]
+  CPUs: 1 - Mem: 4 GB (3.5 GB) - Swap: 0 (0)
+Sept-13 17:58:44.038 [main] DEBUG nextflow.Session - Work-dir: /scratch/chandhraav/nextflow/work [lustre]
+Sept-13 17:58:44.145 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sept-13 17:58:44.189 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Sept-13 17:58:44.190 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Sept-13 17:58:44.314 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sept-13 17:58:44.350 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Sept-13 17:58:44.600 [main] DEBUG nextflow.Session - Session start
+Sept-13 17:58:44.621 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /scratch/chandhraav/nextflow/results/nextflow_trace_233072.txt
+Sept-13 17:58:44.623 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Sept-13 17:58:45.830 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sept-13 17:58:46.224 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Main: /scratch/chandhraav/nextflow/main.nf
+Sept-13 17:58:46.224 [main] DEBUG nextflow.Session - Session aborted -- Cause: /scratch/chandhraav/nextflow/raw/samplesheet.csv
+Sept-13 17:58:46.270 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Sept-13 17:58:46.489 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Sept-13 17:58:47.919 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Sept-13 17:58:48.058 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Sept-13 17:58:48.136 [main] ERROR nextflow.cli.Launcher - /scratch/chandhraav/nextflow/raw/samplesheet.csv
+java.nio.file.NoSuchFileException: /scratch/chandhraav/nextflow/raw/samplesheet.csv
+	at nextflow.file.FileHelper.checkIfExists(FileHelper.groovy:1113)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.Nextflow.file0(Nextflow.groovy:136)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.Nextflow.file(Nextflow.groovy:118)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Main$_runScript_closure8$_closure29.doCall(Main:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:280)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1009)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:187)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:297)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:308)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy:99)
+	at nextflow.script.parser.v2.ScriptLoaderV2.runScript(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:229)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:128)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)

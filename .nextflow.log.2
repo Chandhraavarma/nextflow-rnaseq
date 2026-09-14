@@ -1,0 +1,225 @@
+Sept-13 18:11:14.738 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /scratch/chandhraav/nextflow/main.nf --input /scratch/chandhraav/nextflow/raw/samplesheet.csv --fasta /scratch/chandhraav/nextflow/reference/genome.fa --gtf /scratch/chandhraav/nextflow/reference/Annotation.gtf --skip_deseq2 true --outdir /scratch/chandhraav/nextflow/results -profile conda -resume -with-report /scratch/chandhraav/nextflow/results/nextflow_report_233127.html -with-trace /scratch/chandhraav/nextflow/results/nextflow_trace_233127.txt
+Sept-13 18:11:14.998 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Sept-13 18:11:15.168 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/chandhraav/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Sept-13 18:11:15.238 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sept-13 18:11:15.239 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sept-13 18:11:15.257 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Sept-13 18:11:15.325 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Sept-13 18:11:15.739 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Sept-13 18:11:15.750 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sept-13 18:11:15.838 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 18:11:15.844 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 18:11:15.863 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Sept-13 18:11:15.923 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda`
+Sept-13 18:11:17.274 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, slurm]
+Sept-13 18:11:17.445 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sept-13 18:11:17.446 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sept-13 18:11:17.625 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/chandhraav/.nextflow/secrets/store.json
+Sept-13 18:11:17.630 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3dd31157] - activable => nextflow.secret.LocalSecretsProvider@3dd31157
+Sept-13 18:11:17.705 [main] DEBUG nextflow.cli.CmdRun - Launching `/scratch/chandhraav/nextflow/main.nf` [peaceful_shaw] - revision: efc5667493
+Sept-13 18:11:18.111 [main] DEBUG nextflow.Session - Session UUID: 11cf0b6d-4076-4b95-b790-157e377205bd
+Sept-13 18:11:18.112 [main] DEBUG nextflow.Session - Run name: peaceful_shaw
+Sept-13 18:11:18.112 [main] DEBUG nextflow.Session - Executor pool size: 2
+Sept-13 18:11:18.166 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sept-13 18:11:18.193 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-13 18:11:18.424 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (18:49 GMT)
+  System: Linux 3.10.0-1160.el7.x86_64
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 4768@hm034 [172.10.3.34]
+  CPUs: 1 - Mem: 40 GB (39.4 GB) - Swap: 0 (0)
+Sept-13 18:11:18.524 [main] DEBUG nextflow.Session - Work-dir: /scratch/chandhraav/nextflow/work [lustre]
+Sept-13 18:11:18.622 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sept-13 18:11:18.650 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Sept-13 18:11:18.652 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Sept-13 18:11:18.804 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sept-13 18:11:18.856 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Sept-13 18:11:19.020 [main] DEBUG nextflow.Session - Session start
+Sept-13 18:11:19.050 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /scratch/chandhraav/nextflow/results/nextflow_trace_233127.txt
+Sept-13 18:11:19.052 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Sept-13 18:11:20.519 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sept-13 18:11:21.367 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FASTQC_RAW
+Sept-13 18:11:21.372 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:21.382 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:21.415 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sept-13 18:11:21.463 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=40 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
+Sept-13 18:11:21.466 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sept-13 18:11:21.775 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTQC_RAW': maxForks=10; fair=false; array=0
+Sept-13 18:11:21.897 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FASTP
+Sept-13 18:11:21.901 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:21.901 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:21.914 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FASTP': maxForks=10; fair=false; array=0
+Sept-13 18:11:21.923 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:star_index` matches labels `star_index` for process with name STAR_INDEX
+Sept-13 18:11:21.926 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:21.936 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:21.938 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'STAR_INDEX': maxForks=10; fair=false; array=0
+Sept-13 18:11:21.951 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:star_align` matches labels `star_align` for process with name STAR_ALIGN
+Sept-13 18:11:21.957 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:21.958 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:21.960 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'STAR_ALIGN': maxForks=10; fair=false; array=0
+Sept-13 18:11:21.979 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name FEATURECOUNTS
+Sept-13 18:11:21.983 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:21.983 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:21.984 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'FEATURECOUNTS': maxForks=10; fair=false; array=0
+Sept-13 18:11:22.078 [main] DEBUG n.script.dsl.ProcessConfigBuilder - Config settings `withLabel:rnaseq` matches labels `rnaseq` for process with name MULTIQC
+Sept-13 18:11:22.080 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sept-13 18:11:22.081 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sept-13 18:11:22.082 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=10; fair=false; array=0
+Sept-13 18:11:22.085 [main] DEBUG nextflow.Session - Process names: FASTQC_RAW, STAR_INDEX, FEATURECOUNTS, DESEQ2, MULTIQC, STAR_ALIGN, FASTP
+Sept-13 18:11:22.089 [main] DEBUG nextflow.Session - Igniting dataflow network (7)
+Sept-13 18:11:22.112 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTQC_RAW
+Sept-13 18:11:22.115 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FASTP
+Sept-13 18:11:22.117 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_INDEX
+Sept-13 18:11:22.133 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > STAR_ALIGN
+Sept-13 18:11:22.161 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FEATURECOUNTS
+Sept-13 18:11:22.191 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Sept-13 18:11:22.191 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Main: /scratch/chandhraav/nextflow/main.nf
+Sept-13 18:11:22.191 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sept-13 18:11:22.191 [main] DEBUG nextflow.Session - Session await
+Sept-13 18:11:22.352 [Actor Thread 7] INFO  nextflow.conda.CondaCache - Creating env using conda: /scratch/chandhraav/nextflow/envs/rnaseq.yml [cache /scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf]
+Sept-13 18:16:21.811 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > No more task to compute -- The following nodes are still active:
+[process] FASTQC_RAW
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] FASTP
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] STAR_INDEX
+  status=ACTIVE
+  port 0: (value) bound ; channel: fasta
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] STAR_ALIGN
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: index
+  port 2: (cntrl) -     ; channel: $
+
+[process] FEATURECOUNTS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] MULTIQC
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: qc_files
+  port 1: (cntrl) -     ; channel: $
+
+Sept-13 18:19:21.306 [Actor Thread 7] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/scratch/chandhraav/nextflow/envs/rnaseq.yml path=/scratch/chandhraav/nextflow/work/conda/env-c5201a95646e128543ca90a0a7c8bbaf
+Sept-13 18:19:21.387 [Task submitter] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=FASTP (SRR1039509); work-dir=/scratch/chandhraav/nextflow/work/51/6492f45e7b333c34b08e620dc80cba
+  error [nextflow.exception.ProcessUnrecoverableException]: Process requirement exceeds available CPUs -- req: 4; avail: 1
+Sept-13 18:19:21.425 [Task submitter] DEBUG nextflow.processor.TaskRun - Unable to dump error of process 'FASTP (SRR1039509)' -- Cause: java.nio.file.NoSuchFileException: /scratch/chandhraav/nextflow/work/51/6492f45e7b333c34b08e620dc80cba/.command.log
+Sept-13 18:19:21.428 [Task submitter] ERROR nextflow.processor.TaskProcessor - Error executing process > 'FASTP (SRR1039509)'
+
+Caused by:
+  Process requirement exceeds available CPUs -- req: 4; avail: 1
+
+
+Command executed:
+
+  fastp       --thread 4       --in1 SRR1039509_1.fastq.gz --in2 SRR1039509_2.fastq.gz       --out1 SRR1039509_R1.trim.fastq.gz       --out2 SRR1039509_R2.trim.fastq.gz       --html SRR1039509.fastp.html       --json SRR1039509.fastp.json
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Work dir:
+  /scratch/chandhraav/nextflow/work/51/6492f45e7b333c34b08e620dc80cba
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Sept-13 18:19:21.430 [Task submitter] DEBUG nextflow.Session - Session aborted -- Cause: Process requirement exceeds available CPUs -- req: 4; avail: 1
+Sept-13 18:19:21.433 [Task submitter] DEBUG nextflow.Session - The following nodes are still active:
+[process] STAR_ALIGN
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) OPEN  ; channel: index
+  port 2: (cntrl) -     ; channel: $
+
+[process] FEATURECOUNTS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: gtf
+  port 2: (cntrl) -     ; channel: $
+
+[process] MULTIQC
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: qc_files
+  port 1: (cntrl) -     ; channel: $
+
+Sept-13 18:19:21.456 [Task submitter] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=5; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Sept-13 18:19:21.508 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sept-13 18:19:21.802 [Task submitter] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Sept-13 18:19:23.190 [Task submitter] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Sept-13 18:19:23.311 [Task submitter] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Sept-13 18:19:23.316 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sept-13 18:19:23.316 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sept-13 18:19:23.317 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=5; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Sept-13 18:19:23.327 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Sept-13 18:19:24.045 [main] WARN  nextflow.trace.ReportObserver - Failed to render execution report -- see the log file for details
+nextflow.exception.AbortOperationException: Report file already exists: /scratch/chandhraav/nextflow/results/nextflow_report_233127.html -- enable the 'report.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:66)
+	at nextflow.trace.ReportObserver.renderHtml(ReportObserver.groovy:243)
+	at nextflow.trace.ReportObserver.onFlowComplete(ReportObserver.groovy:129)
+	at nextflow.Session$_notifyFlowComplete_lambda38.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1123)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1093)
+	at nextflow.Session.shutdown0(Session.groovy:775)
+	at nextflow.Session.destroy(Session.groovy:720)
+	at nextflow.script.ScriptRunner.shutdown(ScriptRunner.groovy:244)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:136)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Caused by: java.nio.file.FileAlreadyExistsException: /scratch/chandhraav/nextflow/results/nextflow_report_233127.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:426)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:215)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:2725)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:63)
+	... 12 common frames omitted
+Sept-13 18:19:24.050 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Sept-13 18:19:24.201 [main] WARN  nextflow.trace.TimelineObserver - Failed to render execution timeline -- see the log file for details
+nextflow.exception.AbortOperationException: Timeline file already exists: timeline-20260913-65478680.html -- enable the 'timeline.overwrite' option in your config file to overwrite existing files
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:66)
+	at nextflow.trace.TimelineObserver.renderHtml(TimelineObserver.groovy:164)
+	at nextflow.trace.TimelineObserver.onFlowComplete(TimelineObserver.groovy:91)
+	at nextflow.Session$_notifyFlowComplete_lambda38.doCall(Session.groovy:1093)
+	at nextflow.Session.notifyEvent(Session.groovy:1123)
+	at nextflow.Session.notifyFlowComplete(Session.groovy:1093)
+	at nextflow.Session.shutdown0(Session.groovy:775)
+	at nextflow.Session.destroy(Session.groovy:720)
+	at nextflow.script.ScriptRunner.shutdown(ScriptRunner.groovy:244)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:136)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Caused by: java.nio.file.FileAlreadyExistsException: timeline-20260913-65478680.html
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:94)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:426)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:215)
+	at java.base/java.nio.file.Files.newBufferedWriter(Files.java:2725)
+	at nextflow.trace.TraceHelper.newFileWriter(TraceHelper.groovy:63)
+	... 12 common frames omitted
+Sept-13 18:19:24.201 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Sept-13 18:19:24.223 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sept-13 18:19:24.237 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

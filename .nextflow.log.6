@@ -1,0 +1,79 @@
+Sept-13 17:47:56.466 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /scratch/chandhraav/nextflow/main.nf --input /scratch/chandhraav/nextflow/raw/samplesheet.csv --fasta /scratch/chandhraav/nextflow/reference/genome.fa --gtf /scratch/chandhraav/nextflow/reference/Annotation.gtf --skip_deseq2 true --outdir /scratch/chandhraav/nextflow/results -profile conda -resume -with-report /scratch/chandhraav/nextflow/results/nextflow_report_233070.html -with-trace /scratch/chandhraav/nextflow/results/nextflow_trace_233070.txt
+Sept-13 17:47:56.664 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 26.04.6
+Sept-13 17:47:56.837 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/chandhraav/.nextflow/plugins; core-plugins: nf-amazon@3.9.2,nf-azure@1.22.6,nf-cloudcache@0.6.0,nf-codecommit@0.5.3,nf-console@1.3.0,nf-google@1.27.3,nf-k8s@1.5.4,nf-seqera@0.21.1,nf-tower@1.28.2,nf-wave@1.21.0
+Sept-13 17:47:56.921 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sept-13 17:47:56.923 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sept-13 17:47:56.927 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.14.1 in 'deployment' mode
+Sept-13 17:47:57.009 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Sept-13 17:47:57.432 [main] DEBUG nextflow.plugin.PluginUpdater - Using plugin repository: HttpPluginRepository [registry]; url=https://registry.nextflow.io/api
+Sept-13 17:47:57.443 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sept-13 17:47:57.535 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 17:47:57.556 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /scratch/chandhraav/nextflow/nextflow.config
+Sept-13 17:47:57.563 [main] DEBUG nextflow.config.ConfigParserFactory - Using config parser v2
+Sept-13 17:47:57.620 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `conda`
+Sept-13 17:47:58.999 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [conda, slurm]
+Sept-13 17:47:59.046 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Sept-13 17:47:59.177 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sept-13 17:47:59.179 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sept-13 17:47:59.302 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/chandhraav/.nextflow/secrets/store.json
+Sept-13 17:47:59.321 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2dc3271b] - activable => nextflow.secret.LocalSecretsProvider@2dc3271b
+Sept-13 17:47:59.395 [main] DEBUG nextflow.cli.CmdRun - Launching `/scratch/chandhraav/nextflow/main.nf` [mad_bassi] - revision: 19fc2d2865
+Sept-13 17:47:59.778 [main] DEBUG nextflow.Session - Session UUID: 11cf0b6d-4076-4b95-b790-157e377205bd
+Sept-13 17:47:59.778 [main] DEBUG nextflow.Session - Run name: mad_bassi
+Sept-13 17:47:59.779 [main] DEBUG nextflow.Session - Executor pool size: 2
+Sept-13 17:47:59.830 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sept-13 17:47:59.841 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Sept-13 17:48:00.064 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 26.04.6 build 12646
+  Created: 09-07-2026 18:49 UTC (18:49 GMT)
+  System: Linux 3.10.0-1160.el7.x86_64
+  Runtime: Groovy 4.0.31 on OpenJDK 64-Bit Server VM 25.0.2-internal-adhoc.rattler.src
+  Encoding: UTF-8 (UTF-8)
+  Process: 49144@hm034 [172.10.3.34]
+  CPUs: 1 - Mem: 4 GB (3.5 GB) - Swap: 0 (0)
+Sept-13 17:48:00.112 [main] DEBUG nextflow.Session - Work-dir: /scratch/chandhraav/nextflow/work [lustre]
+Sept-13 17:48:00.217 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sept-13 17:48:00.237 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Sept-13 17:48:00.238 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Sept-13 17:48:00.363 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sept-13 17:48:00.422 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Sept-13 17:48:00.596 [main] DEBUG nextflow.Session - Session start
+Sept-13 17:48:00.628 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /scratch/chandhraav/nextflow/results/nextflow_trace_233070.txt
+Sept-13 17:48:00.642 [main] DEBUG nextflow.script.ScriptLoaderFactory - Using script parser v2
+Sept-13 17:48:01.643 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+Sept-13 17:48:01.702 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Sept-13 17:48:01.885 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Sept-13 17:48:03.237 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Sept-13 17:48:03.396 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Sept-13 17:48:03.468 [main] ERROR nextflow.cli.Launcher - Script compilation failed
+nextflow.exception.ScriptCompilationException: Script compilation failed
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse0(ScriptLoaderV2.groovy:129)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse(ScriptLoaderV2.groovy:81)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse(ScriptLoaderV2.groovy)
+	at nextflow.script.ScriptRunner.parseScript(ScriptRunner.groovy:215)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:126)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:442)
+	at nextflow.cli.Launcher.run(Launcher.groovy:526)
+	at nextflow.cli.Launcher.main(Launcher.groovy:686)
+Caused by: org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+Main: 9: Statements cannot be mixed with script declarations -- move statements into a process, workflow, or function @ line 9, column 1.
+   if (!params.input || !params.fasta || !params.gtf) {
+   ^
+
+1 error
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:292)
+	at org.codehaus.groovy.control.ErrorCollector.addFatalError(ErrorCollector.java:148)
+	at nextflow.script.parser.ScriptAstBuilder.collectSyntaxError(ScriptAstBuilder.java:2195)
+	at nextflow.script.parser.ScriptAstBuilder.compilationUnit(ScriptAstBuilder.java:239)
+	at nextflow.script.parser.ScriptAstBuilder.buildAST(ScriptAstBuilder.java:202)
+	at nextflow.script.parser.ScriptParserPlugin.buildAST(ScriptParserPlugin.java:51)
+	at org.codehaus.groovy.control.SourceUnit.buildAST(SourceUnit.java:256)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:803)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:631)
+	at nextflow.script.parser.v2.ScriptCompiler.compile0(ScriptCompiler.java:146)
+	at nextflow.script.parser.v2.ScriptCompiler.compile(ScriptCompiler.java:112)
+	at nextflow.script.parser.v2.ScriptLoaderV2.parse0(ScriptLoaderV2.groovy:114)
+	... 7 common frames omitted
