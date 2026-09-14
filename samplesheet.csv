@@ -1,4 +1,3 @@
 sample,condition,fastq_1,fastq_2
 control_1,control,/scratch/chandhraav/nextflow/raw/SRR1039508_1.fastq.gz,/scratch/chandhraav/nextflow/raw/SRR1039508_2.fastq.gz
-,,,
 treated_1,treated,/scratch/chandhraav/nextflow/raw/SRR1039509_1.fastq.gz,/scratch/chandhraav/nextflow/raw/SRR1039509_2.fastq.gz
